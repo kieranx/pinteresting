@@ -20,7 +20,7 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '~> 3.3.0'
 
 
-group :development :test do
+group :development, :test do
 	gem 'sqlite3'
 end
 
