@@ -1,8 +1,14 @@
-$body-bg: #ecf0f1;
-$jumbotron-bg: white;
-$navbar-default-bg: #1abc9c;
-$navbar-default-link-color: white;
-$btn-primary-bg: #e74c3c;
-$navbar-default-toggle-icon-bar-bg: white;
+$body-bg: 														#ecf0f1;
+$jumbotron-bg: 												white;
+$navbar-default-bg: 									#1abc9c;
+$navbar-default-link-color: 					white;
+$btn-primary-bg: 											#e74c3c;
+$navbar-default-toggle-icon-bar-bg: 	white;
+$navbar-height: 											40px;
+$navbar-default-link-hover-color: 		darken($navbar-default-link-color, 10%);
+
+.center {
+	text-align: center;
+}
 
 @import 'bootstrap';
