@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Description</th>
       <th>User ID</th>
       <th colspan="3"></th>
@@ -12,14 +13,15 @@
   <tbody>
     <% @pins.each do |pin| %>
       <tr>
+        <td><%= image_tag pin.image(:medium, :default_url => "/system/pins/images/missing.jpg") %></td>
         <td><%= pin.description %></td>
         <td><%= pin.user.email if pin.user %></td>
         <td><%= link_to 'Show', pin %></td>
         <% if user_signed_in? %>
-        <% if pin.user == current_user %>
-          <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+          <% if pin.user == current_user %>
+            <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
+            <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
         <% end %>
       </tr>
     <% end %>
