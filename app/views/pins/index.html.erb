@@ -1,4 +1,4 @@
-<h1>Listing pins</h1>
+<h1>All Pins</h1>
 
 <table>
   <thead>
@@ -13,7 +13,7 @@
   <tbody>
     <% @pins.each do |pin| %>
       <tr>
-        <td><%= image_tag pin.image(:medium, :default_url => "/system/pins/images/missing.jpg") %></td>
+        <td><%= image_tag pin.image(:medium) %></td>
         <td><%= pin.description %></td>
         <td><%= pin.user.email if pin.user %></td>
         <td><%= link_to 'Show', pin %></td>
