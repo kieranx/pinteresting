@@ -27,9 +27,6 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
-
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
